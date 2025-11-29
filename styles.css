@@ -64,10 +64,55 @@ body {
 
 /* ====== HERO SECTION ====== */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, 
+        #10b981,  
+        #0ea5e9,   
+        #3b82f6,   
+        #6366f1,   
+        #8b5cf6,   
+        #0ea5e9,  
+        #10b981   
+    );
+    background-size: 1000% 1000%;    
     color: white;
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
+    position: relative;
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Default: animation ON for users who are fine with motion */
+@media (prefers-reduced-motion: no-preference) {
+    .hero {
+      animation: greenToBlueDrift 45s ease-in-out infinite;
+    }
+  }
+  
+/* Animation OFF for users who requested reduced motion */
+@media (prefers-reduced-motion: reduce) {
+.hero {
+    animation: none; 
+    background: linear-gradient(135deg, #10b981 0%, #0ea5e9 50%, #3b82f6 100%);
+    background-size: 100% 100%;  
+}
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes greenToBlueDrift {
+    0%   { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
 .hero-content h1 {
