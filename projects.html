@@ -1,6 +1,7 @@
 <head>
     <meta charset="UTF-8">
-    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Tyler Hancock About</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,11 +14,11 @@
             <ul class="nav-menu">
 
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active" >About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
-            
-            </ul>      
+
+            </ul>
         </div>
     </nav>
 
@@ -27,7 +28,7 @@
         <div class="hero-content">
             <h1>My Favorite Projects</span></h1>
 
-        
+
             <div class="cta-buttons">
                 <a class="btn btn-secondary" onclick="showSection('Task Management System')">Task Management System</a>
                 <a class="btn btn-secondary" onclick="showSection('Leafy Friends')">Leafy Friends</a>
@@ -35,26 +36,33 @@
                 <a class="btn btn-secondary" onclick="showSection('Duelite')">Duelite</a>
             </div>
             <div>
-                <a id="Task Management System" href="https://github.com/Tyguy818/Task-Management-System" target="_blank" class="btn btn-project active">GitHub repository for Task Management System</a>
-                <a id="Leafy Friends" href="https://github.com/Tyguy818/Task-Management-System" target="_blank" class="btn btn-project hidden">GitHub repository for Leafy Friends</a>
+                <a id="Task Management System" href="https://github.com/Tyguy818/Task-Management-System" target="_blank"
+                    class="btn btn-project active">GitHub repository for Task Management System</a>
+                <a id="Leafy Friends" href="https://github.com/Tyguy818/Leafy-Friends" target="_blank"
+                    class="btn btn-project hidden">GitHub repository for Leafy Friends</a>
             </div>
-        </div>       
+        </div>
     </section>
 
-    <div class ="about-container">
+    <div class="about-container">
         <section id="Task Management System" class="about-section active">
             <h2>📝 Task Management System 📝</h2>
             <p>
-                This was a project completed in a team environment with the goal of creating a web-based task management system while learning to utilize 
-                REST Apis, Flask, and SQLite. The graphic design of this project is not appealing, but bettering our understanding with the aforementioned
+                This was a project completed in a team environment with the goal of creating a web-based task management
+                system while learning to utilize
+                REST Apis, Flask, and SQLite. The graphic design of this project is not appealing, but bettering our
+                understanding with the aforementioned
                 was the goal of the project. This project was built using Python with Flask for the backend,
-                HTML/CSS for the frontend, and SQLite for the database management. We were able to practice form authentication, CRUD operations, building REST APIs,
-                and simple security designs. 
+                HTML/CSS for the frontend, and SQLite for the database management. We were able to practice form
+                authentication, CRUD operations, building REST APIs,
+                and simple security designs.
                 <br><br>
             </p>
             <p>
-                Below are two images showcasing some of our implemented error handling. The first image shows an invalid email being entered, 
-                while the second image shows an attempt to register with an ID and email that are already in use. These apply to sub user creation
+                Below are two images showcasing some of our implemented error handling. The first image shows an invalid
+                email being entered,
+                while the second image shows an attempt to register with an ID and email that are already in use. These
+                apply to sub user creation
                 as well.
             </p>
             <hr>
@@ -67,9 +75,11 @@
             </p>
             <hr>
             <p>
-                Here you can see a main users page layout with options to create a new sub user, manage existing sub users, 
-                create, edit and delete tasks, and log out of the system. When a sub user is created, their password is automatically
-                generated as the primary users id concatenated with the first 3 letters of the sub users name. 
+                Here you can see a main users page layout with options to create a new sub user, manage existing sub
+                users,
+                create, edit and delete tasks, and log out of the system. When a sub user is created, their password is
+                automatically
+                generated as the primary users id concatenated with the first 3 letters of the sub users name.
             </p>
             <hr>
             <p>
@@ -79,9 +89,10 @@
             </p>
             <hr>
             <p>
-                Sub users have a simple layout only being able to view tasks created by their primary user, logout, and 
-                mark tasks as complete. They do not have the ability to create, edit, or delete tasks. If a sub user is 
-                deactivated by the main user, they are shown a message indicating such and are unable to log in again until
+                Sub users have a simple layout only being able to view tasks created by their primary user, logout, and
+                mark tasks as complete. They do not have the ability to create, edit, or delete tasks. If a sub user is
+                deactivated by the main user, they are shown a message indicating such and are unable to log in again
+                until
                 reactivated by the main user.
             </p>
             <hr>
@@ -96,8 +107,10 @@
             </p>
             <hr>
             <p>
-                When a main user goes to manage their sub users, they are presented with a list of their created sub users,
-                the sub user's active status, options to activate, deactivate, or delete accounts, and see each sub user's
+                When a main user goes to manage their sub users, they are presented with a list of their created sub
+                users,
+                the sub user's active status, options to activate, deactivate, or delete accounts, and see each sub
+                user's
                 completed tasks.
             </p>
             <hr>
@@ -110,9 +123,34 @@
         </section>
 
         <section id="Leafy Friends" class="about-section hidden">
-            <h2>Leafy Friends</h2>
+            <h2>🪴 Leafy Friends 🪴</h2>
             <p>
-                TODO: Write project description here.
+                This was a collaborative project completed in a team environment with the goal of creating a mobile
+                plant care application while learning React Native, Expo, and AI API integration. This project was built using
+                React Native with Expo for cross-platform development, TypeScript for the frontend, SQLite for local database management, 
+                and integrated Pl@ntNet for plant identification and Qwen AI from hyperbolic for care recommendations. We were able to
+                practice mobile UI/UX design, camera integration, CRUD operations, complex state management, asynchronous API calls, and
+                implementing scheduling algorithms for watering reminders. This app works on both iOS and Android devices but is not
+                publicly published.
+                <br><br>
+                Please watch this 5 minute video demonstration of the app in action! One feature not shown is the AI
+                chat can only discuss plant related topics which is shown in the image below the video.
+                <br><br>
+            <div class="video-container"
+                style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <iframe 
+                    src="https://www.youtube.com/embed/QKG3ayUkJmA" 
+                    title="Leafy Friends Demo" 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen 
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;">
+                </iframe>
+            </div>
+            <br><br>
+            <img src="images/AIDenied.PNG" alt="AIDenied"
+                style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
             </p>
         </section>
 
@@ -131,8 +169,8 @@
         </section>
 
     </div>
-            
-   
+
+
     <script>
         function showSection(sectionId) {
             console.log("Trying to show section:", sectionId);
@@ -161,4 +199,5 @@
 
     </script>
 </body>
+
 </html>
