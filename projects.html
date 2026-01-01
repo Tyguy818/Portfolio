@@ -14,9 +14,9 @@
             <ul class="nav-menu">
 
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html"class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
 
             </ul>
         </div>
@@ -33,13 +33,14 @@
                 <a class="btn btn-secondary" onclick="showSection('Task Management System')">Task Management System</a>
                 <a class="btn btn-secondary" onclick="showSection('Leafy Friends')">Leafy Friends</a>
                 <a class="btn btn-secondary" onclick="showSection('Harsh Sound Detection')">Harsh Sound Detection</a>
-                <a class="btn btn-secondary" onclick="showSection('Duelite')">Duelite</a>
             </div>
             <div>
                 <a id="Task Management System" href="https://github.com/Tyguy818/Task-Management-System" target="_blank"
                     class="btn btn-project active">GitHub repository for Task Management System</a>
                 <a id="Leafy Friends" href="https://github.com/Tyguy818/Leafy-Friends" target="_blank"
                     class="btn btn-project hidden">GitHub repository for Leafy Friends</a>
+                <a id="Harsh Sound Detection" href="https://github.com/Tyguy818/Harsh-Sound-Detection-Machine-Learning-Model.git" target="_blank"
+                    class="btn btn-project hidden">GitHub repository for Harsh Sound Detection</a>
             </div>
         </div>
     </section>
@@ -48,95 +49,88 @@
         <section id="Task Management System" class="about-section active">
             <h2>📝 Task Management System 📝</h2>
             <p>
-                This was a project completed in a team environment with the goal of creating a web-based task management
-                system while learning to utilize
-                REST Apis, Flask, and SQLite. The graphic design of this project is not appealing, but bettering our
-                understanding with the aforementioned
-                was the goal of the project. This project was built using Python with Flask for the backend,
-                HTML/CSS for the frontend, and SQLite for the database management. We were able to practice form
-                authentication, CRUD operations, building REST APIs,
-                and simple security designs.
-                <br><br>
+                A team-built web application for task management, focused on practicing backend development with Flask,
+                REST APIs, SQLite, user authentication, and CRUD operations.
+                
             </p>
+            <br>
+            <p>The system features two user roles:</p>
+            <ul>
+                <li><strong>Main users</strong> – create and manage sub-users, create/edit/delete tasks, view completed tasks</li>
+                <li><strong>Sub-users</strong> – view assigned tasks and mark them as complete</li>
+            </ul>
+            <br>
             <p>
-                Below are two images showcasing some of our implemented error handling. The first image shows an invalid
-                email being entered,
-                while the second image shows an attempt to register with an ID and email that are already in use. These
-                apply to sub user creation
-                as well.
+                Robust error handling was implemented during registration and login:
             </p>
             <hr>
+            
+            <div class="image-center">
+                <img src="images/Error1.PNG" alt="Error handling: Invalid email format">
+                <hr>
+                <img src="images/Error2.PNG" alt="Error handling: Duplicate ID and email">
+            </div>
+            
+            <hr>
+            
             <p>
-                <br>
-                <img src="images/Error1.PNG" alt="Invalid email">
-                <br><br>
-                <img src="images/Error2.PNG" alt="ID & email already registered">
-                <br>
+                Main user dashboard with task and sub-user management options:
             </p>
             <hr>
+            <div class="image-center">
+                <img src="images/MainUser.PNG" alt="Main user dashboard">
+            </div>
+            
+            <hr>
+            
             <p>
-                Here you can see a main users page layout with options to create a new sub user, manage existing sub
-                users,
-                create, edit and delete tasks, and log out of the system. When a sub user is created, their password is
-                automatically
-                generated as the primary users id concatenated with the first 3 letters of the sub users name.
+                Sub-user views (task list and deactivated account message):
             </p>
             <hr>
+            <div class="image-center">
+                <img src="images/SubUser1Tasks.PNG" alt="Sub-user task list (few tasks)">
+                <hr>
+                <img src="images/SubUser2Tasks.PNG" alt="Sub-user task list (multiple tasks)">
+                <hr>
+                <img src="images/SubUser3Deactivated.PNG" alt="Sub-user deactivated message">
+            </div>
+            
+            <hr>
+            
             <p>
-                <br>
-                <img src="images/MainUser.PNG" alt="Main User">
-                <br><br><br>
+                Sub-user management page showing completed task counts:
             </p>
             <hr>
-            <p>
-                Sub users have a simple layout only being able to view tasks created by their primary user, logout, and
-                mark tasks as complete. They do not have the ability to create, edit, or delete tasks. If a sub user is
-                deactivated by the main user, they are shown a message indicating such and are unable to log in again
-                until
-                reactivated by the main user.
-            </p>
-            <hr>
-            <p>
-                <br>
-                <img src="images/SubUser1Tasks.PNG" alt="Main User">
-                <br><br>
-                <img src="images/SubUser2Tasks.PNG" alt="Sub User Management">
-                <br><br>
-                <img src="images/SubUser3Deactivated.PNG" alt="Sub User Management">
-
-            </p>
-            <hr>
-            <p>
-                When a main user goes to manage their sub users, they are presented with a list of their created sub
-                users,
-                the sub user's active status, options to activate, deactivate, or delete accounts, and see each sub
-                user's
-                completed tasks.
-            </p>
-            <hr>
-            <p>
-                <br>
-                <img src="images/MainUserTasksCompleted.PNG" alt="Main User">
-                <br>
-            </p>
-            <hr>
+            <div class="image-center">
+                <img src="images/MainUserTasksCompleted.PNG" alt="Main user sub-user management with completed task counts">
+            </div>
         </section>
 
         <section id="Leafy Friends" class="about-section hidden">
             <h2>🪴 Leafy Friends 🪴</h2>
             <p>
-                This was a collaborative project completed in a team environment with the goal of creating a mobile
-                plant care application while learning React Native, Expo, and AI API integration. This project was built using
-                React Native with Expo for cross-platform development, TypeScript for the frontend, SQLite for local database management, 
-                and integrated Pl@ntNet for plant identification and Qwen AI from hyperbolic for care recommendations. We were able to
-                practice mobile UI/UX design, camera integration, CRUD operations, complex state management, asynchronous API calls, and
-                implementing scheduling algorithms for watering reminders. This app works on both iOS and Android devices but is not
-                publicly published.
-                <br><br>
-                Please watch this 5 minute video demonstration of the app in action! One feature not shown is the AI
-                chat can only discuss plant related topics which is shown in the image below the video.
-                <br><br>
-            <div class="video-container"
+                A collaborative cross-platform mobile plant care application built with React Native and Expo.
+                The app integrates camera access for plant identification (Pl@ntNet API) and provides AI-generated care
+                recommendations.
+            </p>
+            
+            <p>
+                Key features and technologies practiced:    
+                <ul>
+                    <strong>
+                    <li>Mobile UI/UX design</li>
+                    <li>Camera & image processing</li>
+                    <li>Local SQLite storage</li>
+                    <li>Complex state management</li>
+                    <li>Asynchronous API calls</li>
+                    <li>Scheduled watering reminders</li>
+                    <li>AI integration</li>
+                </strong>
+                </ul>
+            </p>
+                Watch this 5-minute demo of the app in action:
+                <hr>
+                <div class="video-container"
                 style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 <iframe 
                     src="https://www.youtube.com/embed/QKG3ayUkJmA" 
@@ -148,28 +142,88 @@
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;">
                 </iframe>
             </div>
-            <br><br>
+            <hr>
+            <p>
+                One feature not covered in the demo is the AI chat is restricted to plant-related topics only:
+            </p>
+            <hr>
             <img src="images/AIDenied.PNG" alt="AIDenied"
                 style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
             </p>
         </section>
 
         <section id="Harsh Sound Detection" class="about-section hidden">
-            <h2>Harsh Sound Detection</h2>
+            <h2>🎶 Harsh Sound Detection 🎶</h2>
             <p>
-                TODO: Write project description here.
+                This project explores using machine learning to detect audio “harshness” (distortion and excessive high-frequency
+                energy)
+                by converting audio clips into Mel spectrogram images and framing it as a binary image classification task.
+
+            </p>
+            <br>
+            <p>
+                Example Mel spectrograms from the same clips (clean vs. artificially harshened):
+            </p>
+            <hr>
+            <div class="spectrogram-compare">
+                <div class="spec-col">
+                    <h4>Clean</h4>
+                    <img src="images/cleanSpectrogramEx1Blues.png" alt="Clean spectrogram – blues example">
+                    <img src="images/cleanSpectrogramEx2Hiphop.png" alt="Clean spectrogram – hip hop example">
+                </div>
+
+                <div class="spec-col">
+                    <h4>Harsh</h4>
+                    <img src="images/harshSpectrogramEx1Blues.png" alt="Harsh spectrogram – blues example">
+                    <img src="images/harshSpectrogramEx2Hiphop.png" alt="Harsh spectrogram – hip hop example">
+                </div>
+            </div>
+            <hr>
+            <p>
+                The balanced dataset was created from the GTZAN collection (999 clean clips after removing one corrupted file).
+                Each clip was duplicated and modified with <code>pydub</code> to simulate harshness, then converted to Mel spectrograms
+                using <code>librosa</code>.
+            </p>
+            <hr>
+            <h3>Model Results</h3>
+            <p>Four CNN architectures were trained and compared:</p>
+            <ul>
+                <li>Basic CNN (SGD)</li>
+                <li>Basic CNN (Adam)</li>
+                <li>Simple CNN (fewer parameters)</li>
+                <li>Deep CNN (extra layers + batch normalization)</li>
+            </ul>
+            <hr>
+            <p>
+                Performance comparison across models:
+            </p>
+            <hr>
+            <div class="image-center">
+                <img src="images/ModelComparison.png" alt="Model comparison table showing validation accuracy and metrics"
+                    style="max-width: 800px;">
+            </div>
+            <hr>
+            <p>
+                Simpler models generalized better (~80–81% validation accuracy), while the deeper model overfit severely (~51%
+                accuracy).
+            </p>
+            <hr>
+            <div class="image-center">
+                <img src="images/ConfusionMatrix.png" alt="Confusion matrix for the best model (Basic CNN + SGD)"
+                    style="max-width: 500px;">
+                <p class="caption"><em>Confusion matrix of the top-performing model showing balanced classification.</em></p>
+            </div>
+            <hr>
+            <p>
+                <strong>Key takeaway:</strong> Audio quality issues like harshness can be effectively detected via spectrogram image
+                classification,
+                and simpler architectures often yield more robust results than deeper ones.
             </p>
         </section>
-
-        <section id="Duelite" class="about-section hidden">
-            <h2>Skills & Technologies</h2>
-            <p>
-                TODO: Write project description here.
-            </p>
-        </section>
-
     </div>
-
+    <footer>
+        <p>&copy; 2025 Tyler Hancock. All rights reserved.</p>
+    </footer>
 
     <script>
         function showSection(sectionId) {
@@ -197,7 +251,15 @@
             });
         }
 
+        window.addEventListener('DOMContentLoaded', function () {
+                // remove the # and %20 from URL hash
+                const hash = decodeURIComponent(window.location.hash.substring(1));
+                if (hash) {
+                    showSection(hash);
+                }
+            });
     </script>
+    
 </body>
 
 </html>
